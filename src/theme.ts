@@ -13,7 +13,6 @@ export const theme:DefaultTheme = {
     textColor: "#111",
     darkColor: "white",
     accentColor: "#1E9EFF",
-
     mobile: `(max-width: ${size.mobile})`,
     desktop: `(min-width: ${size.desktop})`,
  
