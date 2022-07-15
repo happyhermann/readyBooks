@@ -1,25 +1,27 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
-
+import Router from './routes/Router';
+import { createGlobalStyle } from 'styled-components';
+ 
+const GlobalStyle = createGlobalStyle`
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    background-color: ${props => props.theme.bgColor};
+    color: ${props => props.theme.textColor};    
+  }
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+`
+// 전역 스타일 적용
+ 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <GlobalStyle/>
+      <Router/>
+    </>
+ 
   );
 }
 
