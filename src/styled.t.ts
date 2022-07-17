@@ -9,5 +9,6 @@ declare module "styled-components" {
         darkColor : string;
         mobile: string;
         desktop: string;
+        desktopPadding: string;
     }
 };

@@ -15,6 +15,7 @@ export const theme:DefaultTheme = {
     accentColor: "#1E9EFF",
     mobile: `(max-width: ${size.mobile})`,
     desktop: `(min-width: ${size.desktop})`,
+    desktopPadding: `25px 100px`,
  
 };
 

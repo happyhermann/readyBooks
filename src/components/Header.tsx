@@ -4,9 +4,12 @@ import styled from "styled-components";
 import { useEffect, useState } from "react";
 import { useParams, useNavigate, Link } from "react-router-dom";
 
+
+import 'remixicon/fonts/remixicon.css'
+
 // MUI Icon
 import Icon from '@mui/material/Icon';
-   
+
  // 헤더 컨테이너 
 
 const HeaderContainer = styled.header` 
@@ -20,6 +23,10 @@ const HeaderContainer = styled.header`
     /* todo : 눌렀을 때 하얀색으로 바뀌도록 */
 
   }
+
+  i {
+     font-size: 20px;
+   }
 
   .active {
     transition: 0.2s ease-in;
@@ -68,8 +75,12 @@ const ListContainer = styled.ul`
 `
 
 const Lists = styled.li`
+    display: flex;
+    align-items: center;
+
   @media ${(props) => props.theme.desktop} {
     margin-right: 30px;
+ 
   }
  
 
@@ -134,8 +145,9 @@ export default function Header () {
                          </Lists>
                     <Lists>
                         <Link to="/select">셀렉트
-                          </Link>
-                    </Lists>
+                        </Link>
+                     </Lists>
+                    
                 </ListContainer>
                 <Cash>
                     <Link to="">캐쉬충전</Link>
